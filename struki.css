@@ -1,0 +1,143 @@
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 51, 102, 0.9);
+    opacity: 1;
+}
+
+nav a {
+    padding: 14px 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    /* Ensure relative positioning for the ::after element */
+}
+
+nav a:hover {
+    background-color: #004494;
+}
+
+/* Underline effect */
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.6s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    /* Align items in a row */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: flex-start;
+    /* Align items to the top */
+    padding: 20px;
+}
+
+.sidebar {
+    background: linear-gradient(45deg, #003366, #004488);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-top: -10px;
+    max-width: 1400px;
+    /* Adjusted width */
+    width: 100%;
+    /* Make it responsive */
+    height: auto;
+}
+
+.struka-list {
+    list-style-type: none;
+    /* Remove default bullets */
+    padding: 0;
+    margin: 15px;
+}
+
+.struka-list li {
+    background: rgba(27, 26, 26, 0.1); /* Slightly lighter background */
+    padding: 15px;
+    /* Increase padding */
+    margin: 10px 0;
+    /* Increase margin */
+    border-radius: 5px;
+    transition: background-color 0.3s, max-height 0.3s;
+    cursor: pointer;
+    /* Change cursor on hover */
+    font-size: 20px;
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.struka-list li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* Expandable content style */
+.expandable-content {
+    max-height: 1px;
+    /* Initially hide content */
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    /* Hide overflow */
+    padding-left: 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.expandable-content.expanded {
+    max-height: 1600px;
+    /* Adjust as needed for the content */
+}
+.image-row {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    gap: 10px; /* Add space between the images */
+    margin-bottom: 2px;
+    
+}
+
+.image-row img {
+    max-width: 100%; /* Ensure the images do not overflow */
+    height: auto; /* Maintain the aspect ratio */
+    width: 100%; /* Set a fixed width */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-top: 0;
+    
+    
+}
+
+    
+
+.logo {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    float: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    float: left;
+    
+}
